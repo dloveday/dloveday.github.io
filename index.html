@@ -5,17 +5,21 @@
  <body>
   <p>Hello World</p>
  </body>
- <div id="tab1" onClick="JavaScript:selectTab(1);">Tab 1</div>
-<div id="tab2" onClick="JavaScript:selectTab(2);">Tab 2</div>
-<div id="tab3" onClick="JavaScript:selectTab(3);">Tab 3</div>
-<br/>
-<div id="tab1Content">
-  This is the content to display in the first tab.
-</div>
-<div id="tab2Content">
-  Welcome to tab 2!
-</div>
-<div id="tab3Content">
-  Tab 3 is probably the best of the three tabs.
-</div>
+ <ul class="tabs" role="tablist">
+    <li>
+        <input type="radio" name="tabs" id="tab1" checked />
+        <label for="tab1" 
+               role="tab" 
+               aria-selected="true" 
+               aria-controls="panel1" 
+               tabindex="0">Description</label>
+        <div id="tab-content1" 
+             class="tab-content" 
+             role="tabpanel" 
+             aria-labelledby="description" 
+             aria-hidden="false">
+          <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+        </div>
+    </li>
+</ul>
 </html>
